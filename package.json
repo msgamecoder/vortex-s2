@@ -7,7 +7,7 @@
   "license": "ISC",
 
   "engines": {
-    "node": ">=18.0.0",
+    "node": ">=20.0.0",
     "npm": ">=9.0.0"
   },
 
@@ -21,8 +21,7 @@
     "cleanup": "node cleanup.js",
     "reset-session": "node reset-session.js",
     "start:fresh": "npm run reset-session && npm run start",
-    "install:panel": "npm install --legacy-peer-deps",
-    "install:force": "npm install --force",
+    "install:panel": "npm install",
     "docker:build": "docker build -t docker run -e SESSION_ID=$SESSION_ID vortex-s2"
   },
 
@@ -46,7 +45,7 @@
     "better-sqlite3": "*",
     "btch-downloader": "^2.2.9",
     "buffer": "^6.0.3",
-    "canvas": "^3.2.0",
+    "canvas": "^2.11.2",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.12",
     "cookie": "^0.5.0",
@@ -96,8 +95,8 @@
     "webp-converter": "latest",
     "ws": "^8.17.1",
     "yargs": "^17.6.0",
-    "yt-search": "^2.13.1",
-    "ytdl-core": "^4.11.7"
+    "yt-search": "^2.12.1",
+    "ytdl-core": "^4.11.5"
   },
 
   "overrides": {
