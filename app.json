@@ -1,0 +1,43 @@
+{
+  "name": "Vortex-S2",
+  "description": "Vortex-S2, simple Whatsapp bot by mxgamecoder!",
+  "logo": "https://i.ibb.co/Q7Lv5JBk/zenitsu-agatsuma-3840x2160-24472.png",
+  "keywords": [],
+  "repository": "https://github.com/msgamecoder/vortex-s2",
+  "stack": "container",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+"env": {
+  "SESSION_ID": {
+    "description": "Must begin with 'vortex:~'.",
+    "value": "",
+    "required": true
+  }
+},  
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
